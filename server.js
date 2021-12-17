@@ -10,6 +10,7 @@ app.get("/", (req, res) => {
 
 app.get("/bitch", (req, res) => {
   console.log("Hi bitch");
+  res.sendFile("./views/bitch.html", { root: __dirname });
 });
 
 const userRouter = require("./routes/users");
