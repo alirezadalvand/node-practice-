@@ -17,11 +17,10 @@ const userRouter = require("./routes/users");
 
 app.use("/users", userRouter);
 
-
-app.use((req, res) =>
-{
+app.use((req, res) => {
   console.log("404 err");
-  res.status(404)
-})
+  res.status(404);
+  res.send("<h1>404, OPSs</h1>");
+});
 
 app.listen(3000);
