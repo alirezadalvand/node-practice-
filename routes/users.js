@@ -3,7 +3,7 @@ const router = express.Router();
 
 router.get("/", (req, res) => {
   console.log("users run");
-  res.send("aAlii users are here");
+  res.sendFile("../views/users.html", { root: __dirname });
 });
 
 router.get("/Alireza", (req, res) => {
